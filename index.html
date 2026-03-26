@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fengjie Hong | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Fengjie Hong</span></h1>
+                <h3>Sophomore Student at Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University</h3>
+                <p>Passionate about Deep Learning and Physics-AI interdisciplinary research (using physical models to explain/inspire AI research). I have a strong physics background and outstanding course performance (GPA: 3.9/4.0).</p>
+            </div>
+            <div class="hero-image">
+                <!-- Replace 'profile.jpg' with your actual photo path -->
+                <img src="images/figure.jpg" alt="Fengjie Hong" id="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="section bg-light" id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p>Scroll horizontally to view my projects. Click on any card to learn more.</p>
+            
+            <div class="project-scroll-container">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-project="labotex">
+                    <h3>LABOTEX</h3>
+                    <p class="tag">LLM Agents / LaTeX</p>
+                    <p class="short-desc">An agentic assistant designed to help researchers generate lab reports in LaTeX format efficiently.</p>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card" data-project="wayf">
+                    <h3>WAYF</h3>
+                    <p class="tag">NLP / RLHF</p>
+                    <p class="short-desc">Classifier to detect translationese and finetune Qwen3-4B using GRPO to reduce translationese.</p>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-project="me">
+                    <h3>ME</h3>
+                    <p class="tag">NLP / Word2Vec</p>
+                    <p class="short-desc">Investigating the "Conflicts between Marx and Engles" using word embeddings.</p>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-project="graphics">
+                    <h3>Realtime Simulation</h3>
+                    <p class="tag">Computer Graphics / CUDA</p>
+                    <p class="short-desc">A realtime fluid-rigid two-way coupling and rendering system using PBD and NVIDIA Warp.</p>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-project="cvpr">
+                    <h3>CVPR</h3>
+                    <p class="tag">System / Typesafe</p>
+                    <p class="short-desc">Centralized Visual Package Router, a typesafe full-stack package management system.</p>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card" data-project="emotion">
+                    <h3>Emotion_GAR</h3>
+                    <p class="tag">Computer Vision / Interpretability</p>
+                    <p class="short-desc">Pipeline for emotion prediction from group photos with ViT interpretability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section" id="awards">
+        <div class="container">
+            <h2>Honors & Awards</h2>
+            <ul class="award-list">
+                <li><strong>Friends of Tsinghua - Weichen Scholarship</strong> (2025)</li>
+                <li><strong>Tsinghua University Comprehensive Excellence Scholarship</strong> (2025)</li>
+                <li><strong>Freshman Scholarship</strong> (2024)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Pre-College / Physics Background Section -->
+    <section class="section bg-light" id="background">
+        <div class="container">
+            <h2>Pre-College & Physics Background</h2>
+            <div class="card">
+                <p>Before entering university, I developed a profound foundation in Physics, which heavily inspires my current AI research. I am a fierce competitor in physics olympiads. Click on any medal to see more.</p>
+                <ul class="medal-list">
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="cpho39">🥇 Gold Medal in 39th CPhO (2022)</li>
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="cpho40">🥇 Gold Medal in 40th CPhO (2023)</li>
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="apho24">🥇 Gold Medal in 24th APhO (2024)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="section" id="hobbies">
+        <div class="container">
+            <h2>Hobbies & Interests</h2>
+            <div class="card">
+                <p>When I'm not coding or doing research physics, I enjoy... Click to learn more!</p>
+                <ul class="hobbies-list">
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="swimming">Swimming</li>
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="badminton">Badminton & Jump Rope</li>
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="saxophone">Saxophone</li>
+                    <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="piano">Piano</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal (Hidden by default) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p class="modal-tag" id="modal-tag">Tags</p>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+            <a href="#" id="modal-link" target="_blank" class="btn hidden">View on GitHub</a>
+        </div>
+    </div>
+
+    <!-- Project Data (Store full details here for simplicity) -->
+    <script>
+        const modalData = {
+            labotex: {
+                title: "LABOTEX",
+                tag: "Course: Introduction to Large Language Model Applications",
+                body: "<ul><li>In LABOTEX, we present an agentic assistant designed to help researchers generate lab reports in LaTeX format easily and efficiently.</li><li>We build 4 agents to read instruction books, write introduction section, process experiment data with tables and plots, and integrate all parts into a complete LaTeX report. These agents interact with each other through the intermediate files they generate.</li><li>LABOTEX can generate nice LaTeX reports for General Physics' experiments.</li></ul>",
+                link: "https://github.com/Kehan-Liu/LABOTEX",
+                linkText: "View on GitHub"
+            },
+            wayf: {
+                title: "WAYF (Where Are You From)",
+                tag: "Course: Natural Language Processing",
+                body: "<ul><li>We present a classifier to detect translationese and finetune Qwen3-4B using the classifier to reduce translationese.</li><li>For the classifier, we do transfer learning on BERT. We use GRPO to finetune Qwen3-4B, with the reward designed from the classifier's output.</li><li>Our classifier outperforms zero-shot LLMs on translationese detection.</li></ul>",
+                link: "https://github.com/2omegaXv/WAYF",
+                linkText: "View on GitHub"
+            },
+            me: {
+                title: "ME",
+                tag: "Self-Motivated",
+                body: "<ul><li>To investigate the 'Conflicts between Marx and Engles', we carefully select their writings and analyze their semantic differences on key concepts using Word2Vec.</li><li>Some differences can roughly be seen.</li></ul>",
+                link: "https://github.com/THUtigerhfj/NLP_ME",
+                linkText: "View on GitHub"
+            },
+            graphics: {
+                title: "Realtime Simulation",
+                tag: "Course: Advanced Computer Graphics",
+                body: "<ul><li>We present a realtime fluid-rigid two way coupling and rendering system.</li><li>We use PBD style method for simulation and NVIDIA Warp for multi-threading GPU acceleration.</li><li>Achieved realtime movement control.</li></ul>",
+                link: "https://github.com/THUtigerhfj/ACG_project",
+                linkText: "View on GitHub"
+            },
+            cvpr: {
+                title: "CVPR",
+                tag: "Course: Type-safe Modern System Practice",
+                body: "<ul><li>We present Centralized Visual Package Router (CVPR), a typesafe front-end and back-end system for visualized package management.</li><li>We build the system with functional programming paradigms and type-safe design principles.</li></ul>",
+                link: "https://github.com/zehuaw1/CVPR",
+                linkText: "View on GitHub"
+            },
+            emotion: {
+                title: "Emotion_GAR",
+                tag: "Self-Motivated Computer Vision Project",
+                body: "<ul><li>We proposed a pipeline that, given a group photo, determines the emotion of each person in the image and visualizes which parts of their facial expressions contribute most to the emotion prediction.</li><li>We sequentially use a face detection model, an emotion prediction ViT, and Gradient Attention Rollout to achieve this goal. We also come up with tricks to deal with the 'high-norm tokens' problem in Transformer interpretability.</li></ul>",
+                link: "https://github.com/THUtigerhfj/Emotion_GAR",
+                linkText: "View on GitHub"
+            },
+            cpho39: {
+                title: "39th Chinese Physics Olympiad (CPhO)",
+                tag: "Gold Medal | 2022",
+                body: `<p>CPhO is the highest-level physics competition for high school students in China. I successfully made it to the Sichuan Provincial Team and won a Gold Medal in the national finals.</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/39CPhO.jpg' alt='CPhO 39 Certificate' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/39team.jpg' alt='CPhO 39 Team' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/39single.jpg' alt='CPhO 39 Single' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            cpho40: {
+                title: "40th Chinese Physics Olympiad (CPhO)",
+                tag: "Gold Medal | 2023",
+                body: `<p>I won a Gold Medal in the national finals and was selected for the National Training Team (Top 50 nationwide).</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/40CPhO.jpg' alt='CPhO 40 Certificate' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/40team.jpg' alt='CPhO 40 Team' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/40single.jpg' alt='CPhO 40 Single' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            apho24: {
+                title: "24th Asian Physics Olympiad (APhO)",
+                tag: "Gold Medal | 2024",
+                body: `<p>Represented China (Top 13 nationwide) in the 24th APhO and won a Gold Medal (2nd place) for outstanding performance on the international stage.</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/APhO_certificate.jpg' alt='APhO 24 Certificate' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/APhO_group.jpg' alt='APhO 24 Team China' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/APhO_figure.jpg' alt='APhO 24 Single' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            swimming: {
+                title: "Swimming",
+                tag: "Hobby",
+                body: `<p>I am passionate about swimming. I currently serve as the captain of the IIIS swimming team and our team logo was designed by me. I achieved excellent results in the Ma Yuehan Cup swimming competition (4th place in 50m backstroke, 7th place in 100m freestyle).</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/IIISwimming.png' alt='IIISwimming Flag' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                           <img src='images/swimming_team.jpg' alt='Swimming Team' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            badminton: {
+                title: "Badminton & Jump Rope",
+                tag: "Hobby",
+                body: `<p>I love badminton and related sports, frequently participating in activities on and off campus. I also achieved great results in the Ma Yuehan Cup shuttlecock and jump rope competition (3rd place in double unders, 6th place in single unders).</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/badminton.jpg' alt='Badminton' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            saxophone: {
+                title: "Saxophone",
+                tag: "Hobby",
+                body: `<p>I love playing the saxophone and have experience performing in a wind orchestra.</p>
+                        <div style="display: flex; gap: 25px; margin-top: 20px; justify-content: center; flex-wrap: nowrap; align-items: center;">
+                           <img src='images/saxophone.jpg' alt='Saxophone' style='height: 200px; width: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); object-fit: contain;'>
+                        </div>`,
+            },
+            piano: {
+                title: "Piano",
+                tag: "Hobby",
+                body: "<p>My piano skills are average, but I enjoy playing it as a relaxing hobby.</p>",
+            }
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
