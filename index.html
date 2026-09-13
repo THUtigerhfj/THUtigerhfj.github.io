@@ -14,8 +14,11 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span class="highlight">Fengjie Hong</span></h1>
-                <h3>Sophomore Student at Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University</h3>
-                <p>Passionate about Deep Learning and Physics-AI interdisciplinary research (using physical models to explain/inspire AI research). I have a strong physics background and outstanding course performance (GPA: 3.9/4.0).</p>
+                <h3>Third-year undergraduate at the Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University</h3>
+                <p>I have broad interests in machine learning and currently focus on diffusion language models and reinforcement learning. I have a strong physics background and a GPA of 3.9/4.0.</p>
+                <div class="cv-links">
+                    <a href="CV.pdf" class="btn">CV</a>
+                </div>
             </div>
             <div class="hero-image">
                 <!-- Replace 'profile.jpg' with your actual photo path -->
@@ -23,6 +26,14 @@
             </div>
         </div>
     </header>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <div class="container">
+            <h2>Research</h2>
+            <p>I work with <a href="https://astro-eric.github.io/">Haozhe Jiang</a> (UC Berkeley) on diffusion language models and reinforcement learning, and continue to participate in <a href="https://kaifeng.ac/">Prof. Kaifeng Lyu</a>'s group meetings at Tsinghua University. I am particularly interested in diffusion models and remain open to other areas of machine learning research.</p>
+        </div>
+    </section>
 
     <!-- Projects Section -->
     <section class="section bg-light" id="projects">
@@ -41,7 +52,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-card" data-project="wayf">
                     <h3>WAYF</h3>
-                    <p class="tag">NLP / RLHF</p>
+                    <p class="tag">NLP / Reinforcement Learning</p>
                     <p class="short-desc">Classifier to detect translationese and finetune Qwen3-4B using GRPO to reduce translationese.</p>
                 </div>
 
@@ -49,7 +60,7 @@
                 <div class="project-card" data-project="me">
                     <h3>ME</h3>
                     <p class="tag">NLP / Word2Vec</p>
-                    <p class="short-desc">Investigating the "Conflicts between Marx and Engles" using word embeddings.</p>
+                    <p class="short-desc">Investigating the "Conflicts between Marx and Engels" using word embeddings.</p>
                 </div>
 
                 <!-- Project Card 4 -->
@@ -68,9 +79,16 @@
 
                 <!-- Project Card 6 -->
                 <div class="project-card" data-project="emotion">
-                    <h3>Emotion_GAR</h3>
+                    <h3>Emotion Visualization</h3>
                     <p class="tag">Computer Vision / Interpretability</p>
-                    <p class="short-desc">Pipeline for emotion prediction from group photos with ViT interpretability.</p>
+                    <p class="short-desc">Facial emotion recognition with interactive ViT attention visualization and test-time register tokens.</p>
+                </div>
+
+                <!-- Project Card 7 -->
+                <div class="project-card" data-project="videoeditor">
+                    <h3>VideoEditor</h3>
+                    <p class="tag">Diffusion Models / Video Editing</p>
+                    <p class="short-desc">Video object editing from text prompts, reference images, and sketches.</p>
                 </div>
             </div>
         </div>
@@ -81,6 +99,7 @@
         <div class="container">
             <h2>Honors & Awards</h2>
             <ul class="award-list">
+                <li><strong>Tsinghua University Merit Student (三好学生)</strong> (2026)</li>
                 <li><strong>Friends of Tsinghua - Weichen Scholarship</strong> (2025)</li>
                 <li><strong>Tsinghua University Comprehensive Excellence Scholarship</strong> (2025)</li>
                 <li><strong>Freshman Scholarship</strong> (2024)</li>
@@ -93,7 +112,7 @@
         <div class="container">
             <h2>Pre-College & Physics Background</h2>
             <div class="card">
-                <p>Before entering university, I developed a profound foundation in Physics, which heavily inspires my current AI research. I am a fierce competitor in physics olympiads. Click on any medal to see more.</p>
+                <p>Before entering university, I built a strong foundation in physics through study and physics olympiads. Click on any medal to see more.</p>
                 <ul class="medal-list">
                     <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="cpho39">🥇 Gold Medal in 39th CPhO (2022)</li>
                     <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="cpho40">🥇 Gold Medal in 40th CPhO (2023)</li>
@@ -108,7 +127,7 @@
         <div class="container">
             <h2>Hobbies & Interests</h2>
             <div class="card">
-                <p>When I'm not coding or doing research physics, I enjoy... Click to learn more!</p>
+                <p>Outside coding and research, I enjoy swimming, badminton, and music. Click to learn more!</p>
                 <ul class="hobbies-list">
                     <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="swimming">Swimming</li>
                     <li class="clickable-item" style="cursor: pointer; color: var(--primary-color);" data-item="badminton">Badminton & Jump Rope</li>
@@ -152,7 +171,7 @@
             me: {
                 title: "ME",
                 tag: "Self-Motivated",
-                body: "<ul><li>To investigate the 'Conflicts between Marx and Engles', we carefully select their writings and analyze their semantic differences on key concepts using Word2Vec.</li><li>Some differences can roughly be seen.</li></ul>",
+                body: "<ul><li>To investigate the 'Conflicts between Marx and Engels', we carefully select their writings and analyze their semantic differences on key concepts using Word2Vec.</li><li>Some differences can roughly be seen.</li></ul>",
                 link: "https://github.com/THUtigerhfj/NLP_ME",
                 linkText: "View on GitHub"
             },
@@ -171,10 +190,17 @@
                 linkText: "View on GitHub"
             },
             emotion: {
-                title: "Emotion_GAR",
+                title: "Emotion Visualization",
                 tag: "Self-Motivated Computer Vision Project",
-                body: "<ul><li>We proposed a pipeline that, given a group photo, determines the emotion of each person in the image and visualizes which parts of their facial expressions contribute most to the emotion prediction.</li><li>We sequentially use a face detection model, an emotion prediction ViT, and Gradient Attention Rollout to achieve this goal. We also come up with tricks to deal with the 'high-norm tokens' problem in Transformer interpretability.</li></ul>",
-                link: "https://github.com/THUtigerhfj/Emotion_GAR",
+                body: "<ul><li>Built a facial emotion recognition pipeline combining RetinaFace detection with a pretrained ViT classifier, supporting seven emotion categories and attention visualization for each face.</li><li>Implemented enhanced CLS attention maps and integrated training-free test-time register tokens to reduce attention artifacts, with an interactive web interface and batch inference.</li></ul>",
+                link: "https://github.com/THUtigerhfj/emotion-visualization",
+                linkText: "View on GitHub"
+            },
+            videoeditor: {
+                title: "VideoEditor",
+                tag: "Video Generation & Editing",
+                body: "<ul><li>A video object editing workspace supporting text prompts, reference images, and sketches through FLUX/AnyDoor first-frame editing and VideoPainter/CogVideoX propagation.</li><li>Combines sketch-to-image generation and object-mask tracking with React and Gradio interfaces for interactive editing.</li></ul>",
+                link: "https://github.com/THUtigerhfj/VideoEditor",
                 linkText: "View on GitHub"
             },
             cpho39: {
